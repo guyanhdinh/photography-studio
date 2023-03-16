@@ -1,0 +1,313 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background-color: #fff;
+  font-family: "Inter", sans-serif;
+  color: #191825;
+}
+
+.site-logo {
+  color: #191825;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: #eaeaea;
+}
+
+a:hover {
+  color: #191825;
+  text-decoration: underline;
+  text-decoration-color: #d61c4e;
+}
+
+footer {
+  background-color: #d61c4e;
+  color: #fff;
+  height: 75px;
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+  font-weight: 500;
+}
+
+/* Home Page */
+
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.5rem;
+}
+p {
+  font-size: 1rem;
+}
+
+.container-top-image {
+  background-image: url("./images/home-image1.jpg");
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  color: #fff;
+  padding: 25px;
+  margin: 40px auto;
+}
+
+.container-top-content {
+  text-align: center;
+  margin: 40px auto;
+  max-width: 60%;
+}
+
+.container-bottom {
+  margin: 40px auto;
+  text-align: center;
+  max-width: 60%;
+}
+
+.container-bottom > img {
+  margin-bottom: 40px;
+}
+
+.link-button {
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  padding: 8px 12px;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+  background-color: #161616;
+  margin: 10px;
+}
+
+.link-button:hover {
+  transform: translate(1px, 1px);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* About Page */
+
+.about-container {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.about-container > h2 {
+  text-decoration: underline;
+  text-decoration-color: #d61c4e;
+}
+
+.about-container > img {
+  margin: 50px auto;
+  max-width: 90%;
+}
+
+.about-text {
+  max-width: 65%;
+  margin: auto;
+}
+
+/* Gallery Page */
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding: 10px 23px;
+}
+
+.column {
+  -ms-flex: 25%;
+  flex: 25%;
+  max-width: 25%;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+  .container-top-content {
+    max-width: 90%;
+  }
+  .container-bottom {
+    max-width: 90%;
+  }
+  .about-text {
+    max-width: 90%;
+  }
+  .about-container > img {
+    max-width: 100%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+  .container-top-content {
+    max-width: 100%;
+  }
+  .container-bottom {
+    max-width: 100%;
+  }
+  .about-text {
+    max-width: 100%;
+  }
+  .about-container > img {
+    max-width: 100%;
+  }
+}
+
+.photo-list-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.photo-list-filter-buttons > a {
+  margin-right: 15px;
+}
+
+.photo-type {
+  padding: 5px 15px;
+  margin: 5px 10px;
+  font-style: normal;
+  font-weight: 400;
+  border: none;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #191825;
+  transition: 200ms all cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.photo-type.selected {
+  color: #fff;
+}
+
+.photo-type.portrait:hover,
+.photo-type.portrait.selected {
+  background-color: #293462;
+}
+
+.photo-type.wedding:hover,
+.photo-type.wedding.selected {
+  background-color: #d61c4e;
+}
+
+.photo-type.family:hover,
+.photo-type.family.selected {
+  background-color: #1cd6ce;
+}
+
+.photo-type.graduation:hover,
+.photo-type.graduation.selected {
+  background-color: #fedb39;
+}
+
+.photo-type.clear-filters {
+  margin: 5px 10px;
+  padding: 5px 15px;
+  font-style: normal;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  text-decoration: underline;
+  background-color: transparent;
+  color: #191825;
+}
+
+/* Contact Page */
+
+.form-container {
+  height: 100vh;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container > h2 {
+  text-decoration: underline;
+  text-decoration-color: #d61c4e;
+}
+
+.form {
+  margin: 50px;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 5px 5px 15px -1px rgba(0, 0, 0, 0.75);
+}
+
+.form-input {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+.form-textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  height: 80px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+.form-select {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  padding: 5px;
+  font-family: "Inter", sans-serif;
+}
+
+.form-submit {
+  margin-top: 20px;
+  width: 50%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #d61c4e;
+  border: none;
+  cursor: pointer;
+}
+
+.form-submit:hover {
+  transform: translate(1px, 1px);
+}
