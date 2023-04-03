@@ -53,24 +53,23 @@ p {
 }
 
 .container-top-image {
-  background-image: url("./images/home-image1.jpg");
+  background-image: url("./images/home-image.jpeg");
   background-position: center;
   background-size: cover;
   height: 100vh;
   width: 100%;
   color: #fff;
   padding: 25px;
-  margin: 40px auto;
 }
 
 .container-top-content {
   text-align: center;
-  margin: 40px auto;
+  margin: 60px auto;
   max-width: 60%;
 }
 
 .container-bottom {
-  margin: 40px auto;
+  margin: 60px auto;
   text-align: center;
   max-width: 60%;
 }
@@ -125,22 +124,21 @@ p {
 /* Gallery Page */
 
 .row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  /* display: grid; */
+  /* flex-wrap: wrap; */
   padding: 10px 23px;
+  grid-auto-rows: auto;
+  grid-auto-flow: dense;
+  align-items: center;
 }
 
 .column {
-  -ms-flex: 25%;
   flex: 25%;
-  max-width: 25%;
+  /* justify-content: flex-start; */
 }
 
 .column img {
   margin-top: 8px;
-  vertical-align: middle;
   width: 100%;
 }
 
